@@ -1,0 +1,131 @@
+// Variáveis
+$primary: #0d6efd;
+$secondary: #6c757d;
+$success: #198754;
+$info: #0dcaf0;
+$warning: #ffc107;
+$danger: #dc3545;
+$dark: #212529;
+$light: #f8f9fa;
+
+// Global Styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f4f6f9;
+  overflow-x: hidden;
+}
+
+// App Layout
+.app-wrapper {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 250px;
+  transition: margin-left 0.3s ease;
+  background-color: #f4f6f9;
+  min-height: 100vh;
+  
+  @media (max-width: 768px) {
+    margin-left: 0;
+  }
+  
+  main {
+    padding: 20px;
+    
+    @media (max-width: 768px) {
+      padding: 15px;
+    }
+  }
+}
+
+// Container adjustments
+.container-fluid {
+  padding-left: 25px;
+  padding-right: 25px;
+  
+  @media (max-width: 768px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+// Card Styles
+.card {
+  border: none;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  
+  .card-header {
+    background-color: white;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    padding: 15px 20px;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .card-footer {
+    background-color: white;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    padding: 15px 20px;
+  }
+}
+
+// Utility classes
+.hover-effect {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+  }
+}
+
+// Progress bar
+.progress {
+  height: 6px;
+  border-radius: 10px;
+  background-color: #e9ecef;
+  
+  .progress-bar {
+    border-radius: 10px;
+  }
+}
+
+// Status indicator
+.status-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  
+  &.bg-success { background-color: $success; }
+  &.bg-warning { background-color: $warning; }
+  &.bg-secondary { background-color: $secondary; }
+  &.bg-danger { background-color: $danger; }
+}
+
+// Badge styles
+.badge {
+  padding: 6px 12px;
+  font-weight: 500;
+  font-size: 0.75rem;
+  border-radius: 6px;
+}
+

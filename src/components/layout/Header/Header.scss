@@ -1,0 +1,138 @@
+.header {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+  
+  .search-wrapper {
+    position: relative;
+    width: 100%;
+    
+    svg {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #6c757d;
+      z-index: 10;
+    }
+    
+    input {
+      padding-left: 35px;
+      width: 100%;
+      border-radius: 20px;
+      
+      &:focus {
+        box-shadow: none;
+        border-color: #80bdff;
+        background-color: #e9ecef;
+      }
+    }
+  }
+  
+  .user-avatar {
+    width: 35px;
+    height: 35px;
+    background-color: #e9ecef;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #495057;
+    overflow: hidden;
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  
+  .notifications-menu {
+    width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+  }
+  
+  .dropdown-toggle {
+    &::after {
+      display: none;
+    }
+  }
+  
+  .dropdown-menu {
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border: none;
+    margin-top: 10px;
+    
+    .dropdown-header {
+      font-size: 0.8rem;
+      color: #6c757d;
+    }
+    
+    .dropdown-item {
+      padding: 0.5rem 1rem;
+      
+      &:hover {
+        background-color: #f8f9fa;
+      }
+      
+      &.text-danger:hover {
+        background-color: #dc3545;
+        color: white !important;
+        
+        svg {
+          color: white !important;
+        }
+      }
+    }
+  }
+}
+
+// Dark mode support
+@media (prefers-color-scheme: dark) {
+  .header {
+    background-color: #343a40;
+    
+    .navbar-brand {
+      color: #fff !important;
+    }
+    
+    .search-wrapper input {
+      background-color: #495057;
+      color: #fff;
+      
+      &::placeholder {
+        color: #adb5bd;
+      }
+      
+      &:focus {
+        background-color: #495057;
+      }
+    }
+    
+    .user-avatar {
+      background-color: #495057;
+      color: #fff;
+    }
+    
+    .dropdown-menu {
+      background-color: #343a40;
+      
+      .dropdown-item {
+        color: #fff;
+        
+        &:hover {
+          background-color: #495057;
+        }
+      }
+      
+      .dropdown-header {
+        color: #adb5bd;
+      }
+    }
+  }
+}

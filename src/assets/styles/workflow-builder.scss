@@ -1,0 +1,22 @@
+.workflow-builder {
+  .step-item {
+    transition: all 0.2s;
+    
+    &:hover {
+      background-color: #f8f9fa;
+    }
+  }
+  
+  .step-type-badge {
+    min-width: 120px;
+  }
+  
+  .drag-handle {
+    cursor: grab;
+    color: #adb5bd;
+    
+    &:active {
+      cursor: grabbing;
+    }
+  }
+}

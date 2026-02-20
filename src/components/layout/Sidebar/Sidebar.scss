@@ -1,0 +1,139 @@
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #343a40;
+  color: #fff;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+  
+  .sidebar-header {
+    padding: 20px;
+    border-bottom: 1px solid #495057;
+    
+    h3 {
+      margin: 0;
+      font-size: 1.2rem;
+      
+      svg {
+        color: #0d6efd;
+      }
+    }
+  }
+  
+  .nav {
+    flex: 1;
+    padding: 10px 0;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    
+    .nav-link {
+      color: #adb5bd;
+      padding: 10px 20px;
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      width: 100%;
+      border-left: 3px solid transparent;
+      
+      &:hover {
+        color: #fff;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-left-color: #0d6efd;
+      }
+      
+      &.active {
+        color: #fff;
+        background-color: rgba(13, 110, 253, 0.2);
+        border-left-color: #0d6efd;
+        
+        svg {
+          color: #0d6efd;
+        }
+      }
+      
+      svg {
+        margin-right: 12px;
+        font-size: 1.1rem;
+        width: 20px;
+        text-align: center;
+      }
+      
+      span {
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+    }
+  }
+  
+  .sidebar-footer {
+    padding: 15px 20px;
+    border-top: 1px solid #495057;
+    
+    .online-indicator {
+      width: 8px;
+      height: 8px;
+      background-color: #28a745;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 8px;
+      animation: pulse 2s infinite;
+    }
+    
+    small {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+// Scrollbar customization
+.sidebar .nav::-webkit-scrollbar {
+  width: 5px;
+}
+
+.sidebar .nav::-webkit-scrollbar-track {
+  background: #2b2f32;
+}
+
+.sidebar .nav::-webkit-scrollbar-thumb {
+  background: #666;
+  border-radius: 3px;
+  
+  &:hover {
+    background: #888;
+  }
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .sidebar {
+    left: -250px;
+    z-index: 1000;
+    
+    &.open {
+      left: 0;
+      box-shadow: 2px 0 10px rgba(0,0,0,0.3);
+    }
+  }
+}
