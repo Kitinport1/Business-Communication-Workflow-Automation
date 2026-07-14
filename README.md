@@ -2,6 +2,8 @@
 
 Sistema completo de automação de workflows de comunicação empresarial com integrações multicanal, automações de marketing, análise SEO e muito mais.
 
+> Built with an AI-accelerated development workflow (prompt-driven prototyping and scaffolding), then manually reviewed and refined for architecture, business logic, and documentation.
+
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
 ![React](https://img.shields.io/badge/React-18.2.0-61dafb)
 ![Firebase](https://img.shields.io/badge/Firebase-10.0.0-ffca28)
@@ -399,18 +401,3 @@ Consulte a documentação do React
 
 ⭐ Se este projeto te ajudou, dê uma estrela no GitHub!
 
-text
-
-## 📋 **Como adicionar ao seu projeto**
-
-```bash
-# 1. No diretório do projeto, crie o arquivo README.md
-touch README.md
-
-# 2. Abra o arquivo e cole todo o conteúdo acima
-# (use seu editor de código preferido)
-
-# 3. Adicione ao git
-git add README.md
-git commit -m "Add comprehensive README documentation"
-git push origin main
